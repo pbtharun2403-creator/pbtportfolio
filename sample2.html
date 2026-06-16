@@ -416,17 +416,27 @@
       </div>
     </div>
     <div class="reveal">
-      <div class="form">
-        <input class="field" type="text" placeholder="Your Name"/>
-        <input class="field" type="email" placeholder="Your Email"/>
-        <textarea class="field" rows="5" placeholder="Your Message"></textarea>
-        <button class="send-btn" id="sendBtn">Send Message →</button>
-      </div>
-    </div>
+  <form action="https://formsubmit.co/pbtharun2403@email.com" method="POST" class="form">
+
+    <input class="field" type="text" name="name" placeholder="Your Name" required>
+
+    <input class="field" type="email" name="email" placeholder="Your Email" required>
+
+    <textarea class="field" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <input type="hidden" name="_subject" value="New Portfolio Message">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button class="send-btn" type="submit">
+      Send Message →
+    </button>
+
+  </form>
+</div>
   </div>
 </section>
 
-<footer>Built by <span>Tharun P B</span> · 2025</footer>
+<footer>Built by <span>Tharun P B</span> · 2026</footer>
 
 <script>
 const io = new IntersectionObserver(entries=>{
@@ -439,11 +449,7 @@ window.addEventListener('scroll',()=>{
   document.getElementById('pgbar').style.width = pct+'%';
 });
 
-document.getElementById('sendBtn').addEventListener('click',function(){
-  this.textContent='✓ Sent!';
-  this.style.background='var(--accent2)';
-  setTimeout(()=>{ this.textContent='Send Message →'; this.style.background=''; },3000);
-});
+
 </script>
 </body>
 </html>
